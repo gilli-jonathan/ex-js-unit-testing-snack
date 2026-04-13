@@ -8,11 +8,7 @@ test("La funzione getInitials restituisce le iniziali di un nome completo", () =
 
 //2 SNACK
 test("La funzione createSlug restituisce una stringa in lowercase.", () => {
-
     expect(createSlug('CIOCCOLATOSOO')).toBe('cioccolatosoo')
+    expect(createSlug('uNa fRaSE LUngHa')).toBe('una frase lungha')
 })
 
-function createSlug(stringa) {
-
-    return stringa.toLowerCase()
-}
