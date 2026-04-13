@@ -24,4 +24,17 @@ test("La funzione createSlug sostituisce gli spazi con -.", () => {
     expect(createSlug('BuoNgIoRno siGnoriNA')).toBe('buongiorno-signorina')
 })
 
+//5 SNACK
+test("La funzione isPalindrome verifica se una stringa è un palindromo.", () => {
+    expect(isPalidrome('StrinGa')).toBeFalsy()
+    expect(isPalidrome('otto')).toBeTruthy()
+    expect(isPalidrome('anna otto anna')).toBeTruthy()
+})
+
+function isPalidrome(stringa) {
+    const parolaInvertita = stringa.split('').reverse().join('')
+    return stringa === parolaInvertita
+
+}
+
 
