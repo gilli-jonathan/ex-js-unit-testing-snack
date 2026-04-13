@@ -1,4 +1,4 @@
-const { getInitials, createSlug, average } = require("./snack")
+const { getInitials, createSlug, average, isPalidrome } = require("./snack")
 
 //1 SNACK
 test("La funzione getInitials restituisce le iniziali di un nome completo", () => {
@@ -31,10 +31,5 @@ test("La funzione isPalindrome verifica se una stringa è un palindromo.", () =>
     expect(isPalidrome('anna otto anna')).toBeTruthy()
 })
 
-function isPalidrome(stringa) {
-    const parolaInvertita = stringa.split('').reverse().join('')
-    return stringa === parolaInvertita
-
-}
 
 
