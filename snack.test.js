@@ -1,4 +1,4 @@
-const { getInitials } = require("./snack")
+const { getInitials, createSlug, average } = require("./snack")
 
 //1 SNACK
 test("La funzione getInitials restituisce le iniziali di un nome completo", () => {
@@ -7,8 +7,21 @@ test("La funzione getInitials restituisce le iniziali di un nome completo", () =
 })
 
 //2 SNACK
-test("La funzione createSlug restituisce una stringa in lowercase.", () => {
-    expect(createSlug('CIOCCOLATOSOO')).toBe('cioccolatosoo')
-    expect(createSlug('uNa fRaSE LUngHa')).toBe('una frase lungha')
+// test("La funzione createSlug restituisce una stringa in lowercase.", () => {
+//     expect(createSlug('CIOCCOLATOSOO')).toBe('cioccolatosoo')
+//     expect(createSlug('uNa fRaSE LUngHa')).toBe('una frase lungha')
+// })
+
+//3 SNACK
+test("La funzione average calcola la media aritmetica di un array di numeri.", () => {
+    expect(average([5, 15])).toBe(10)
+    expect(average([10, 20, 30, 40, 50])).toBe(30)
 })
+
+//4 SNACK
+test("La funzione createSlug sostituisce gli spazi con -.", () => {
+    expect(createSlug('EsemPio DI una StrinGa')).toBe('esempio-di-una-stringa')
+    expect(createSlug('BuoNgIoRno siGnoriNA')).toBe('buongiorno-signorina')
+})
+
 

@@ -4,12 +4,18 @@ function getInitials(nomeCognome) {
 }
 
 function createSlug(stringa) {
+    return stringa.toLowerCase().replaceAll(" ", "-")
+}
 
-    return stringa.toLowerCase()
+function average(arrayNumeri) {
+    let somma = 0
+    arrayNumeri.forEach(num => somma += num);
+    return somma / arrayNumeri.length
 }
 
 
 module.exports = {
     getInitials,
     createSlug,
+    average,
 }
