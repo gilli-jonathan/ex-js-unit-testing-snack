@@ -22,9 +22,24 @@ function isPalidrome(stringa) {
 
 }
 
+function findPostById(post, id) {
+    if (isNaN(id)) {
+        throw new Error('valore di ricerca ID non valido')
+    }
+    post.forEach(p => {
+        if (p.id === undefined ||
+            p.title === undefined ||
+            p.slug === undefined
+        ) { throw new Error('array non valido') }
+    })
+    return post.find(p => p.id === id) || null;
+
+}
+
 module.exports = {
     getInitials,
     createSlug,
     average,
     isPalidrome,
+    findPostById,
 }
